@@ -1,8 +1,12 @@
 This is a standalone CMake project of [Qt Affine Transformations](https://doc.qt.io/qt-6/qtwidgets-painting-affine-example.html) example.
 
+After running `cmake --build <build-dir> --target install` you will be provided with a `affine.appx` package that will be installed under `c:\Program Files\WindowsApps\9801A16D-FCD7-48FD-A132-2ED185569A20_1.0.0.0_x64__q09h79j15ccq6`.
+
+This is meant to showcase how a Qt application can be packaged as a Windows Store package running with `runFullTrust` capabilities.
+
 # Configuration
 
-The project requires either having a pfx certificate file or first running from a Visual C++ 2019 command prompt the `make-self-signed-certificate.cmd` shell file.
+The project requires either having a `pfx` certificate file or first running from a Visual C++ 2019 command prompt the `make-self-signed-certificate.cmd` shell file.
 
 Then the project should be configured with Visual C++ and a Qt6 installation. I've tested with Qt 6.5.2.
 
