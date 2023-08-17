@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="@APPX_PACKAGE_GUID@" Publisher="@APPX_PACKAGE_PUBLISHER@" Version="@APPX_PACKAGE_VERSION@" ProcessorArchitecture="@APPX_PACKAGE_ARCHITECTURE@" />
+  <Properties>
+    <DisplayName>@APPX_PACKAGE_SHORT_NAME@</DisplayName>
+    <PublisherDisplayName>@APPX_PACKAGE_PUBLISHER_DISPLAY_NAME@</PublisherDisplayName>
+    <Logo>Assets/StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14316.0" MaxVersionTested="10.0.14316.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+  <Resources>
+    <Resource Language="EN-US" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="@APPX_PACKAGE_EXECUTABLE@" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+          DisplayName="@APPX_PACKAGE_SHORT_NAME@"
+          Description="@APPX_PACKAGE_DESCRIPTION@"
+          BackgroundColor="transparent"
+          Square150x150Logo="Assets/Logo.png"
+          Square44x44Logo="Assets/SmallLogo.png">
+        <uap:DefaultTile />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+</Package>
